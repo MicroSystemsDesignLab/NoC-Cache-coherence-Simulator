@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(NoC_Coherence_Simulator)
+set(CMAKE_CXX_STANDARD 17)
+set(SRC_DIR src)
+set(INC_DIR include)
+include_directories(${INC_DIR})
+file(GLOB SOURCES ${SRC_DIR}/*.cpp)
+add_executable(noc_simulator ${SRC_DIR}/main.cpp ${SRC_DIR}/*.cpp)
